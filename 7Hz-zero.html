@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm | Ultimate sound store</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    
+         <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="INDEX.html"><img src="img/file.svg" width="125px"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="INDEX.html">Home</a></li>
+                        <li><a href="PRODUCTS.html">Products</a></li>
+                        <li><a href="ABOUTUS.html">About</a></li>
+                        <li><a href="ACCOUNT.html">Account</a></li>
+                    </ul>
+                </nav>
+                    <a href="cart.html"><img src="img/png/cart.png" width="70px" height="70px"></a>
+            </div>
+    
+        </div>
+
+    <!---------single product detail---------->
+
+    <div class="s-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (6).jpg" width="100%" id="productImg">
+                <div class="s-img-row">
+                    <div class="s-img-col">
+                        <img src="img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (6).jpg" class="s-img">
+                    </div>
+                    <div class="s-img-col">
+                        <img src="img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (9).jpg" class="s-img">
+                    </div>
+                    <div class="s-img-col">
+                        <img src="img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (1).jpg" class="s-img">
+                    </div>
+                    <div class="s-img-col">
+                        <img src="img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (2).jpg" class="s-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">     
+                <p>Home / 7Hz</p>
+                <h1>7Hz Salnotes Zero</h1>
+                <h4>1800</h4>
+                <input type="number" value="1">
+                <a href="CART.html" class="button" onclick="addToCart('7Hz Salnotes Zero', 1690, 'img/7Hz/7HZ Salnotes Zero IEM Wired Earphones/img (6).jpg')">Add To Cart</a>
+                <h3>Product Details</h3><br>
+                <p>The 7Hz Salnotes Zero has easily got to be among the best IEMs that you can buy under Rs. 2000.
+                    This IEM puts a lot of its counterparts to shame and is prime example of why you don't need to pay for tuning.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+        </div>
+    </div>
+    
+    
+
+
+
+
+    <div class="s-container">
+
+        
+        
+        
+        
+        <div class="row">
+            <div class="col-4">
+                <a href="7Hz-l.html"><img src="img/7Hz/7HZ Legato Dual Dynamic Drivers IEMs/img (1).jpg" >
+                <h4>7Hz Legato</h4></a>
+                <p>₹ 8,599</p>
+            </div>
+            <div class="col-4">
+                <a href="7Hz-t.html"><img src="img/7Hz/7HZ Timeless Planar HiFi In-Ear Earphone Online/img (1).jpg" >
+                <h4>7HZ Timeless</h4></a>
+                <p>₹17,990</p>
+            </div>
+            <div class="col-4">
+                <a href="fiio-10.html"><img src="img/Fiio/FiiO JD10 Single Dynamic Driver In-Ear Monitors/img (1).jpg" >
+                <h4>FiiO JD10</h4></a>
+                <p>₹799</p>
+            </div>
+            <div class="col-4">
+               <a href="kz-edc.html"><img src="img/KZ/KZ EDC Pro Dynamic Driver In-Ear Monitor/img (2).jpg" >
+                <h4>KZ EDC Pro</h4></a>
+                <p>₹ 599</p>
+            </div>
+        </div> 
+
+       
+        
+    </div>
+    
+        
+
+    <!---------------------------------------------------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Udeful Links</h3>
+                    <ul>
+                        <li>Exchange policy</li>
+                        <li>Return policy</li>
+                      
+                    </ul>
+                </div>
+                 <div class="footer-col-2">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2025 - Ohm</p>
+        </div>
+
+    </div>
+    <!--------------------JS for cart--------------->
+    <script>
+  function addToCart(name, price, img) {
+    let qty = document.querySelector("input[type=number]").value;
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price, img, qty: parseInt(qty) });
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+</script>
+</body>
+</html> 
+
+
+<!------------JS for detail.html-------->
+
+<script>
+    var productImg = document.getElementById("productImg");
+    var sImg = document.getElementsByClassName("s-img");
+
+    sImg[0].onclick = function (){
+        productImg.src = sImg[0].src;
+
+    }
+    sImg[1].onclick = function (){
+        productImg.src = sImg[1].src;
+        
+    }
+    sImg[2].onclick = function (){
+        productImg.src = sImg[2].src;
+        
+    }
+    sImg[3].onclick = function (){
+        productImg.src = sImg[3].src;
+        
+    }   
+</script>

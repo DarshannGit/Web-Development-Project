@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm | Ultimate sound store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="INDEX.html"><img src="img/file.svg" width="125px"></a>
+            </div>
+            <nav>
+            <ul>
+                <li><a href="INDEX.html">Home</a></li>
+                <li><a href="PRODUCTS.html">Products</a></li>
+                <li><a href="ABOUTUS.html">About</a></li>
+                <li><a href="ACCOUNT.html">Account</a></li>
+            </ul>
+            </nav>
+                <a href="cart.html"><img src="img/png/cart.png" width="70px" height="70px"></a>
+        </div>
+    </div>
+
+    <!-----------account---------->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/png/Adobe Express - file (1).png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginform">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="button">Login</button>
+                        </form>
+                        <form id="regform"> 
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="E-mail">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="button">Register</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------------footer----------------------------------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Udeful Links</h3>
+                    <ul>
+                        <li>Exchange policy</li>
+                        <li>Return policy</li>
+                      
+                    </ul>
+                </div>
+                 <div class="footer-col-2">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2025 - Ohm</p>
+        </div>
+
+    </div>
+<!------------------JS---------->
+<script>
+    var loginform=document.getElementById("loginform");
+    var regform=document.getElementById("regform");
+    var indicator=document.getElementById("indicator")
+
+        function register(){
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+</script>
+
+
+
+</body>
+</html> 
+
+
